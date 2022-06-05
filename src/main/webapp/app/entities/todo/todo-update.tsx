@@ -21,7 +21,7 @@ export const TodoUpdate = (props: RouteComponentProps<{ id: string }>) => {
   const updating = useAppSelector(state => state.todo.updating);
   const updateSuccess = useAppSelector(state => state.todo.updateSuccess);
   const handleClose = () => {
-    props.history.push('/todo');
+    props.history.push('/todo' + props.location.search);
   };
 
   useEffect(() => {

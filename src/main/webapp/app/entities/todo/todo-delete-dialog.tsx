@@ -20,7 +20,7 @@ export const TodoDeleteDialog = (props: RouteComponentProps<{ id: string }>) => 
   const updateSuccess = useAppSelector(state => state.todo.updateSuccess);
 
   const handleClose = () => {
-    props.history.push('/todo');
+    props.history.push('/todo' + props.location.search);
   };
 
   useEffect(() => {
